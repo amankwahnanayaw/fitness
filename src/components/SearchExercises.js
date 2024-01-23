@@ -20,7 +20,15 @@ const SearchExercises = () => {
             borderRadius: '40px'
           }} 
         height='76px' value='' placeholder='Search Exercise' type='text' onChange={(e) => {}}/>
-        
+        <Button
+          sx={{
+            bgcolor: '#FF2625',
+            color: '#FFF',
+            textTransform: 'none',
+          }}
+        >
+
+        </Button>
       </Box>
     </Stack>
   )
