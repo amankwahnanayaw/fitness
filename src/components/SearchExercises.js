@@ -7,7 +7,7 @@ const SearchExercises = () => {
       <Typography fontWeight={700} mb='50px' textAlign='center' sx={{ fontSize: { lg: '44px', xs: '30px' } }}>
         Awesome Exercise You <br /> Should Know
       </Typography>
-      <Box position='relative' mb='72px'>
+      <Box position='relative' mb='72px' paddingLeft={6}>
         <TextField 
           sx={{ 
             input: {
@@ -15,7 +15,7 @@ const SearchExercises = () => {
             border: 'none',
             borderRadius: '4px'
             }, 
-            width: { lg: '1170px', xs: '350px' },
+            width: { lg: '800px', xs: '350px', sm: '450px' },
             backgroundColor: '#fff',
             borderRadius: '40px'
           }} 
@@ -25,9 +25,13 @@ const SearchExercises = () => {
             bgcolor: '#FF2625',
             color: '#FFF',
             textTransform: 'none',
+            width: { lg: '175px', xs: '80px' },
+            fontSize: { lg: '20px', xs: '14px' },
+            height: '56px',
+            position: 'absolute',
           }}
         >
-
+          Search
         </Button>
       </Box>
     </Stack>
