@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { Box, Stack, TextField, Typography, Button} from '@mui/material';
 
 const SearchExercises = () => {
   return (
-    <div>SearchExercises</div>
+    <Stack alignIteams='center' mt='37px' justifyContent='center' p='20px'>
+      Awesome Exercise You <br /> Should Know
+    </Stack>
   )
 }
 

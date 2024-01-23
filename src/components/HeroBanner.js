@@ -9,10 +9,10 @@ const HeroBanner = () => {
         <Typography color="#FF2625" fontWeight="600" fontSize="26px">
             Fitness Club
         </Typography>
-        <Typography fontWeight="700" mb="30px" mt="30px" sx={{ fontSize: { lg: '44px', xs: '40px' } }}>
+        <Typography fontWeight="700" mb="40px" mt="40px" sx={{ fontSize: { lg: '44px', xs: '40px' } }}>
           Sweat, Smile <br /> and Repeat
         </Typography>
-        <Typography fontSize="22px" lineHeight="35px" mb={4}>
+        <Typography fontSize="22px" lineHeight="35px" mb={10}>
           Check out the most effective exercises
         </Typography>
         <Typography fontWeight={600} color="#FF2625" fontSize="200px" sx={{ opacity: '0.1', display: { lg: 'block', xs: 'none' } }}>
