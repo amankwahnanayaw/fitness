@@ -5,26 +5,25 @@ import { exerciseOptions, fetchData } from '../utils/fetchData';
 import HorizontalScrollbar from './HorizontalScrollbar';
 
 const SearchExercises = () => {
-  const [search, setSearch] = useState('');
-  const [exercise, setExercise] = useState([]);
-  const [bodyParts, setBodyParts] = useState([]);
+  const [search, setSearch] = useState('')
+  const [exercises, setExercises] = useState([]);
+  const [bodyParts, setBodyParts] = useState([])
 
   useEffect(() => {
-   const fetchExerciseData = async () => {
+   const fetchExercisesData = async () => {
     const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
 
     setBodyParts(['all', ...bodyPartsData]);
    }
 
-   fetchExerciseData();
+   fetchExercisesData();
   }, [])
   
 
   const handleSearch = async () => {
     if(search) {
-      const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+      const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises?limit=10', exerciseOptions);
 
-      console.log(exercisesData);
 
       const searchedExercises = exercisesData.filter(
         (exercise) => exercise.name.toLowerCase().includes(search)
@@ -34,13 +33,13 @@ const SearchExercises = () => {
       );
 
       setSearch('');
-      setExercise(searchedExercises);
+      setExercises(searchedExercises);
       
     }
   }
 
   return (
-    <Stack alignIteams='center' mt='37px' justifyContent='center' p='20px'>
+    <Stack alignItems='center' mt='37px' justifyContent='center' p='20px'>
       <Typography fontWeight={700} mb='50px' textAlign='center' sx={{ fontSize: { lg: '44px', xs: '30px' } }}>
         Awesome Exercise You <br /> Should Know
       </Typography>
