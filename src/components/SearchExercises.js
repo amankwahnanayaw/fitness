@@ -13,7 +13,7 @@ const SearchExercises = () => {
    const fetchExerciseData = async () => {
     const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
 
-    setBodyParts('all', ...bodyPartsData);
+    setBodyParts(['all', ...bodyPartsData]);
    }
 
    fetchExerciseData();
@@ -54,7 +54,7 @@ const SearchExercises = () => {
             backgroundColor: '#fff',
             borderRadius: '40px'
           }} 
-        height='76px' value='search' placeholder='Search Exercise' type='text' onChange={(e) => setSearch(e.target.value.toLowerCase())}/>
+        height='76px' placeholder='Search Exercise' value={search} type='text' onChange={(e) => setSearch(e.target.value.toLowerCase())}/>
         <Button
           sx={{
             bgcolor: '#FF2625',
