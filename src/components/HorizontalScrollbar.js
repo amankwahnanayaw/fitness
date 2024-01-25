@@ -8,7 +8,7 @@ import RightArrowIcon from '../assets/icons/right-arrow.png';
 import LeftArrowIcon from '../assets/icons/left-arrow.png';
 
 const LeftArrow = () => {
-  const { scrollPrev } = useContext(VisibilityContext)
+  const { scrollPrev } = useContext(VisibilityContext);
 
   return (
     <Typography onClick={() => scrollPrev()} className='right-arrow'>
