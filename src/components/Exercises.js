@@ -16,11 +16,24 @@ const Exercises = ({ exercises, setExercises, bodypart }) => {
       <Typography variant='h3' mb='46px'>
         Showing Result
       </Typography>
-      <stack direction="row" sx={{ gap: { lg: '110px', xs: '50px' } }} flexwrap="wrap" justifycontent="center">
+      <Stack direction="row" sx={{ gap: { lg: '110px', xs: '50px' } }} flexwrap="wrap" justifycontent="center">
         { exercises.map((exercise, index) => (
             <ExerciseCard key={index} exercise={exercise}/>   
         ))}
-      </stack>
+      </Stack>
+      <Stack>
+        {exercises.lenght > 9 && (
+          <Pagination 
+          color="standard"
+          shape="rounded"
+          defaultPage={1}
+          count={Math.ceil(exercises.lenght / 9)}
+          page={currentPage}
+          onChange={paginate}
+          size
+          />
+        )}
+      </Stack>
     </Box>
   )
 }
