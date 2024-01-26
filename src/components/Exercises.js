@@ -15,7 +15,7 @@ const Exercises = ({ exercises, setExercises, bodypart }) => {
       <Typography variant='h3' mb='46px'>
         Showing Result
       </Typography>
-      <stack direction="row" sx={{ gap: { lg: '110px', xs: '50px' } }} flexWrap="wrap" justifyContent="center">
+      <stack direction="row" sx={{ gap: { lg: '110px', xs: '50px' } }} flexwrap="wrap" justifycontent="center">
         { exercises.map((exercise, index) => (
             <p>{exercise.name}</p>   
         ))}
