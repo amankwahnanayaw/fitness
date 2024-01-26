@@ -9,6 +9,12 @@ const Exercises = ({ exercises, setExercises, bodypart }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const exercisesPerPage = 9;
 
+  const paginate = (e, value) => {
+    setCurrentPage(value);
+
+    window.scrollTo({ top:1800, behavior: 'smooth' })
+  }
+
   return (
     <Box id="exercises" 
     sx={{ mt: {lg: '110px'} }}
