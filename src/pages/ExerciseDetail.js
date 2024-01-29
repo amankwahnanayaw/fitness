@@ -13,7 +13,7 @@ const ExerciseDetail = () => {
 
   useEffect(() => {
     const fetchExerciseData = async () => {
-      const exerciseDbUrl = await fetchData('http://exercisedb.p.rapidapi.com')
+      const exerciseDbUrl = 'http://exercisedb.p.rapidapi.com'
     }
 
     fetchExerciseData();
