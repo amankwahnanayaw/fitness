@@ -28,8 +28,12 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       } else {
         exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodypart/${bodyPart}', exerciseOptions, exerciseOptions);
       }
+
+      setExercises(exercisesData)
     }
-  })
+
+    fetchExercisesData();
+  }, [bodyPart]);
 
   return (
     <Box id="exercises" 
