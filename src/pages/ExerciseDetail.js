@@ -8,9 +8,12 @@ import SimilarExercises from '../components/SimilarExercises';
 import ExerciseVideo from '../components/ExerciseVideo';
 
 const ExerciseDetail = () => {
+  const [exerciseDetail, setExerciseDetail] = useState({});
+  const {id} = useParams();
+
   return (
     <Box>
-      <Detail />
+      <Detail exerciseDetail={}/>
       <ExerciseVideo />
       <SimilarExercises />
     </Box>
