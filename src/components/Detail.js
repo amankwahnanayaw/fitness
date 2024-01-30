@@ -11,6 +11,15 @@ const Detail = ({exerciseDetail}) => {
     return (
         <Stack gap='60px' sx={{ flexDirection: { lg: 'row' }, p: '20px', alignItems: 'center' }}>
             <img src={gifUrl} alt={name} loading='lazy' className='detail-image'/>
+            <Stack sx={{ gap: { lg: '35px', xs: '20px' } }}>
+                <Typography>
+                    {name}
+                </Typography>
+                <Typography>
+                    Exercises keep you strong. {name}
+                    
+                </Typography>
+            </Stack>
         </Stack>
     )
 }
