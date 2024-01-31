@@ -4,7 +4,7 @@ import { InfinitySpin } from 'react-loader-spinner';
 
 const loader = () => {
   return (
-    <Stack direction='row' justifyContent='center' alignItems='center'>
+    <Stack direction='row' justifyContent='center' alignItems='center' width='100%'>
 
     </Stack>
   )
